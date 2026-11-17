@@ -123,15 +123,15 @@ img {
   font-family: var(--fonte-principal);
   font-size: 1em;
   font-weight: lighter;
-  color: var(--cor-preto);
-  background-color: var(--cor-bordo-escuro);
+  color: var(--cor-bordo-mais-escuro);
+  background-color: var(--cor-rosa-claro);
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button-header:hover {
-  background-color: var(--cor-bordo-mais-escuro);
+  background-color: var(--cor-rosa-pastel);
   transform: translateY(-2px);
 }
 
@@ -661,13 +661,13 @@ justify-content: space-between;
   display: block;
   padding: 8px 0;
   font-size: 1.05em;
-  color: var(--cor-cinza-claro);
+  color: var(--cor-rosa-claro);
   transition: color 0.4s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-nav-column a:hover {
-  color: var(--cor-branco);
+  color: var(--cor-rosa-claro);
   border-bottom: 1px solid var(--cor-branco);
   transform: translateY(-2px);
 }
@@ -687,7 +687,7 @@ justify-content: space-between;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: var(--cor-cinza-medio);
+  color: var(--cor-rosa-claro);
 }
 
 .contact-value, 
