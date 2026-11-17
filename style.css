@@ -431,15 +431,11 @@ img {
   border: none;
   outline: none;
   cursor: pointer;
-  color:var(--cor-rosa-claro);
+  color:var(--cor-marrom-rosado);
 
 }
 
-.search-toggle img {
-  display: block;
-  width: 24px;
-  height: 24px;
-}
+
 
 .search-box-container {
   display: none;
@@ -504,15 +500,84 @@ input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
 
-.search-form .search-button img {
+/* --- Lupa em CSS --- */
+.css-lupa-icon {
+  position: relative;
+  display: inline-block;
+  
+  /* Tamanho do aro da lupa */
   width: 18px;
   height: 18px;
-  margin-left: 8px;
+  
+  /* Cria o círculo. O currentColor faz a borda herdar a cor do botão pai (var(--cor-rosa-claro)) */
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  box-sizing: border-box;
+  
+  /* Margem para centralizar perfeitamente no espaço de 24px que você tinha antes */
+  margin: 3px; 
 }
 
-.search-form .clear-button img {
-  width: 14px;
+/* O cabo da lupa */
+.css-lupa-icon::after {
+  content: "";
+  position: absolute;
+  
+  /* Posicionamento do cabo na parte inferior direita */
+  bottom: -4px;
+  right: -5px;
+  
+  /* Tamanho e espessura do cabo */
+  width: 8px;
+  height: 2px;
+  
+  /* Cor herdada do pai */
+  background-color: currentColor;
+  
+  /* Rotação em 45 graus para dar o ângulo exato */
+  transform: rotate(45deg);
+  border-radius: 2px; /* Deixa a ponta do cabo levemente arredondada */
+}
+
+/* --- Ícone de X (Fechar/Limpar) em CSS --- */
+.css-x-icon {
+  position: relative;
+  display: inline-block;
+  width: 14px;  /* Mesmo tamanho da sua imagem original */
   height: 14px;
+  
+  /* Cor do X (coloquei o marrom rosado do placeholder, mas você pode mudar para a cor que preferir) */
+  color: var(--cor-bordo); 
+}
+
+/* Criando as duas linhas que formam o X */
+.css-x-icon::before,
+.css-x-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  /* Largura e espessura das linhas */
+  width: 100%;
+  height: 2px; 
+  background-color: currentColor;
+  border-radius: 2px; /* Deixa as pontinhas do X arredondadas */
+}
+
+/* Inclinando a primeira linha em 45 graus */
+.css-x-icon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Inclinando a segunda linha na direção oposta (-45 graus) para cruzar */
+.css-x-icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Opcional: Efeito hover para deixar o X mais escuro ao passar o mouse */
+.clear-button:hover .css-x-icon {
+  color: var(--cor-bordo);
 }
 
 /* =================================================================== */
